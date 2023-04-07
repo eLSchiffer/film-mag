@@ -5,13 +5,13 @@ import './style.css';
 
 
 
-const Movies = ({ movies, handler }) => {
+const Movies = ({ movies }) => {
 
     return (
         <>
             <h1>Movies</h1>
             <div className="movies-container">
-                <MovieList movies={movies} handler={handler} />
+                <MovieList movies={movies} />
                 <Outlet />
             </div>
         </>

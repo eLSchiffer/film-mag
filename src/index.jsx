@@ -11,8 +11,6 @@ import { movies } from './movie-database';
 import Movie from './components/Movie';
 
 
-const handleSelect = ((e) => console.log('Kliknul jsi na link'))
-
 const App = () => {
   return (
     <div className="container">
@@ -55,7 +53,7 @@ const router = createBrowserRouter([
       },
       {
         path: "movies/",
-        element: <Movies movies={movies} handler={handleSelect} />,
+        element: <Movies movies={movies} />,
         children: [{
           path: ":movieId",
           element: < Movie movies={movies} />,

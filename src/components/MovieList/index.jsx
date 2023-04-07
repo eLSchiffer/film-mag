@@ -4,15 +4,21 @@ import { Link } from "react-router-dom";
 
 
 
-const MovieList = ({ movies, handler }) => {
-
-    console.log(movies.map((movie) => { return (movie) }));
+const MovieList = ({ movies }) => {
     return (
 
         < div className="movie-list">
-            {movies.map((film) => { return (<Link onClick={handler} key={film.id} to={film.id}>{film.title}</Link >) })}
+            {movies?.map((movie) => {
+                return (<Link key={movie.id} to={`${movie.id}`} >{movie.title}</Link>)
+            })}
         </div >
     )
 }
+/* DOTAZ:
+proč zápis: <Link key={movie.id} to={movie.id} >{movie.title}</Link> nefunguje?
+
+
+*/
+
 
 export default MovieList;
